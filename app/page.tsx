@@ -5,6 +5,7 @@ import Info from "./_components/info";
 import Newsletter from "./_components/newsletter";
 import Schedule from "./_components/schedule";
 import Services from "./_components/services";
+import Testimonials from "./_components/testimonials";
 import Therapist from "./_components/therapist";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Schedule />
       <Therapist />
       <Benefits />
+      <Testimonials />
       <Newsletter />
       <FAQ />
     </div>
