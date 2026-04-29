@@ -27,16 +27,16 @@ const Navbar = () => {
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
     { label: "Founder's", href: "#founders" },
-    { label: "Pre & Postnatal Massage", href: "#massage" },
-    { label: "Testimonials", href: "#testimonials" },
-    { label: "Contact us", href: "#contact" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Blogs", href: "#blogs" },
+    { label: "Pre & Postnatal Massage", href: "/pre-postnatal-massage" },
+    { label: "Testimonials", href: "/testimonials" },
+    { label: "Contact us", href: "/contact" },
+    { label: "FAQ", href: "/faq" },
+    { label: "Blogs", href: "/blogs" },
   ];
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 pt-2.5 transition-colors duration-300 ${isScrolled ? "bg-[#212121]" : ""}`}
+      className={`fixed top-0 w-full text-white z-50 pt-2.5 transition-colors duration-300 ${isScrolled ? "bg-[#212121]" : ""}`}
     >
       <nav className="flex items-center justify-between px-6 lg:px-12 py-6 h-26">
         <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
@@ -72,7 +72,7 @@ const Navbar = () => {
           />
         </div>
         <Link
-          href="#contact"
+          href="/contact"
           className="text-sm tracking-wide hover:text-accent transition-colors"
         >
           CONTACT

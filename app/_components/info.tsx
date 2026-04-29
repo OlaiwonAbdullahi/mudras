@@ -22,7 +22,7 @@ const Info = () => {
                 className="object-contain"
               />
             </div>
-            <h2 className="text-4xl lg:text-4xl font-light tracking-wide text-foreground mb-8 leading-tight text-balance">
+            <h2 className="text-3xl lg:text-4xl font-light tracking-wide text-foreground mb-8 leading-tight text-balance">
               When Standard Massage <br /> Isn&apos;t Enough, Try a <br />
               Therapeutic Sports Massage
             </h2>
@@ -47,8 +47,6 @@ const Info = () => {
                 elsewhere.
               </p>
             </div>
-
-            {/* CTA Button */}
             <button className="bg-[#f0cc75] hover:bg-accent/90 text-black px-8 py-4 mt-8 font-medium tracking-wide transition-colors w-fit">
               EXPERIENCE THE DIFFERENCE
             </button>
