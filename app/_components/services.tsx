@@ -35,17 +35,20 @@ const Services = () => (
             tag: "Performance",
             title: "Expert Sports & Deep Tissue Massage",
             isFormatted: true,
-            intro: "Our deep tissue and sports massage services draw from extensive training across multiple disciplines:",
+            intro:
+              "Our deep tissue and sports massage services draw from extensive training across multiple disciplines:",
             sections: [
               {
                 label: "Western & Eastern Techniques:",
-                items: ["Swedish, Deep Tissue, Thai, Trigger Point Therapy, Acupressure, Reflexology, Shiatsu, Neuromuscular Therapy, and more"]
+                items: [
+                  "Swedish, Deep Tissue, Thai, Trigger Point Therapy, Acupressure, Reflexology, Shiatsu, Neuromuscular Therapy, and more",
+                ],
               },
               {
                 label: "Specialized Applications:",
-                items: ["Pre & Postnatal, Hydrotherapy, Myofascial Release"]
-              }
-            ]
+                items: ["Pre & Postnatal, Hydrotherapy, Myofascial Release"],
+              },
+            ],
           },
         ].map((s) => (
           <article key={s.title} className="group">
@@ -58,18 +61,25 @@ const Services = () => (
               />
             </div>
             <div className="mt-8 text-[#212121]">
-              <p className="text-xl md:text-2xl mt-3 text-center">{s.title}</p>
+              <p className="text-xl md:text-2xl mt-3 text-center font-medium">
+                {s.title}
+              </p>
               {s.isFormatted ? (
                 <div className="mt-5 text-center">
-                  <p className="leading-relaxed mb-5 text-sm">{s.intro}</p>
+                  <p className="">{s.intro}</p>
                   <div className="space-y-4">
                     {s.sections?.map((section, idx) => (
-                      <div key={idx} className="text-left inline-block">
+                      <div
+                        key={idx}
+                        className="text-left flex flex-col items-start gap-0"
+                      >
                         <div className="flex items-start gap-3 mb-2">
-                          <span className="text-amber-700 text-lg flex-shrink-0">✓</span>
-                          <span className="font-semibold text-amber-700">{section.label}</span>
+                          <span className="font-medium text-lg flex-shrink-0">
+                            ✓
+                          </span>
+                          <span className="font-medium">{section.label}</span>
                         </div>
-                        <div className="ml-6 text-sm leading-relaxed text-gray-700">
+                        <div className="ml-6  leading-relaxed text-gray-700">
                           {section.items.map((item, i) => (
                             <div key={i}>{item}</div>
                           ))}
@@ -86,7 +96,7 @@ const Services = () => (
         ))}
       </div>
 
-      <div className="mt-20 text-center ">
+      <div className="mt-10 text-center ">
         <p className="text-[#212121] text-base md:text-lg max-w-3xl mx-auto">
           Each Mudras massage therapy session skillfully combines the modalities
           your body needs most. Thanks to our extensive experience with diverse
