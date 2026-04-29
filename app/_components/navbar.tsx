@@ -25,8 +25,8 @@ const Navbar = () => {
 
   const menuItems = [
     { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Founder's", href: "#founders" },
+    { label: "About", href: "/about" },
+    { label: "Founder's", href: "/founders" },
     { label: "Pre & Postnatal Massage", href: "/pre-postnatal-massage" },
     { label: "Testimonials", href: "/testimonials" },
     { label: "Contact us", href: "/contact" },
