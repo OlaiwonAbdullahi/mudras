@@ -4,14 +4,14 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
+import { PlusSignIcon } from "@hugeicons/core-free-icons";
 
 const referralOptions = [
   "Referral",
   "Social Media",
   "Google Maps",
   "Magazine article",
-  "Other",
+  "Other (please specify)",
 ];
 
 const faqs = [
@@ -39,11 +39,13 @@ const faqs = [
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     message: "",
     heardAbout: [] as string[],
+    referralDetails: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -65,33 +67,49 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col flex-1">
       {/* Hero Section */}
-      <section className="relative w-full flex items-center justify-center overflow-hidden pt-44 pb-24 bg-stone-100">
-        <div className="relative z-10 w-full px-6 lg:px-12 text-center flex flex-col items-center">
-          <Image
-            src="/images/icon.webp"
-            alt="Mudras Icon"
-            width={30}
-            height={30}
-            className="object-contain mb-8"
-          />
-          <h1 className="text-5xl lg:text-7xl font-light tracking-wide text-[#212121] mb-4">
+      <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 z-0 grayscale"
+          style={{
+            backgroundImage: "url(/images/mudrashero.webp)",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/55" />
+        </div>
+        <div className="relative z-10 w-full px-6 lg:px-12 text-center flex flex-col items-center pt-44 pb-24">
+          <h1 className="text-5xl lg:text-7xl font-light tracking-wide text-[#fffcf2] mb-10">
             Contact Us
           </h1>
-          <div className="mt-2 flex justify-center">
-            <span className="ornament" />
-          </div>
+          <a
+            href="#contact-form"
+            className="bg-[#f0cc75] uppercase hover:bg-[#e0bc65] text-black px-8 py-4 font-medium tracking-wide transition-colors inline-block"
+          >
+            Book Your Session
+          </a>
         </div>
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-stone-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
+      <section
+        id="contact-form"
+        className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-[#fffcf2]"
+      >
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <Image
+              src="/images/icon.webp"
+              alt="Mudras Icon"
+              width={30}
+              height={30}
+              className="object-contain mx-auto mb-6"
+            />
             <h2 className="text-3xl lg:text-[42px] font-light tracking-wide text-[#212121] leading-tight">
-              Get in Touch With Us
+              Get in touch with us
             </h2>
-            <p className="text-[#212121]/70 text-base md:text-[17px] leading-relaxed mt-6 max-w-2xl mx-auto">
-              To schedule a session or for any other inquiry — please complete
+            <p className="text-[#212121]/70 text-base leading-relaxed mt-6 max-w-xl mx-auto">
+              To schedule a session or for any other inquiry – please complete
               the form below or email us at{" "}
               <a
                 href="mailto:info@mudras.com"
@@ -99,168 +117,204 @@ export default function ContactPage() {
               >
                 info@mudras.com
               </a>
-              .
             </p>
-            <p className="text-[#212121] font-medium text-sm tracking-widest uppercase mt-4">
+            <p className="text-[#212121] text-sm mt-4">
               Bookings by appointment only
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Left - Contact Info */}
-            <div className="flex flex-col justify-between">
-              <div className="space-y-8">
-                <div>
-                  <p className="text-sm tracking-widest uppercase text-[#212121]/50 mb-2">
-                    Address
-                  </p>
-                  <p className="text-[17px] text-[#212121]">
-                    37 W 20th Street, New York City, NY 10011
-                  </p>
-                </div>
-                <div>
-                  <p className="text-sm tracking-widest uppercase text-[#212121]/50 mb-2">
-                    Phone
-                  </p>
-                  <a
-                    href="tel:2128378382"
-                    className="text-[17px] text-[#212121] hover:underline"
-                  >
-                    (212) 837-8382
-                  </a>
-                </div>
-                <div>
-                  <p className="text-sm tracking-widest uppercase text-[#212121]/50 mb-2">
-                    Email
-                  </p>
-                  <a
-                    href="mailto:info@mudras.com"
-                    className="text-[17px] text-[#212121] hover:underline"
-                  >
-                    info@mudras.com
-                  </a>
-                </div>
-              </div>
+          {submitted ? (
+            <div className="border border-[#a08858]/40 p-10 md:p-14 text-center">
+              <Image
+                src="/images/icon.webp"
+                alt="Mudras Icon"
+                width={30}
+                height={30}
+                className="object-contain mx-auto mb-4"
+              />
+              <h3 className="text-3xl font-light text-[#212121]">Thank you!</h3>
+              <p className="text-[#212121]/60 mt-2">
+                We&apos;ll get back to you shortly.
+              </p>
             </div>
-
-            {/* Right - Form */}
-            <div>
-              {submitted ? (
-                <div className="flex items-center justify-center h-full min-h-[400px]">
-                  <div className="text-center">
-                    <Image
-                      src="/images/icon.webp"
-                      alt="Mudras Icon"
-                      width={30}
-                      height={30}
-                      className="object-contain mx-auto mb-4"
-                    />
-                    <h3 className="text-3xl font-light text-[#212121]">
-                      Thank you!
-                    </h3>
-                    <p className="text-[#212121]/60 mt-2">
-                      We&apos;ll get back to you shortly.
-                    </p>
-                  </div>
-                </div>
-              ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  className="border border-[#212121]/20 rounded-[15px] p-8 md:p-10 bg-white/50"
-                >
-                  <div className="space-y-6">
+          ) : (
+            <form
+              onSubmit={handleSubmit}
+              className="border border-[#a08858]/40 p-8 md:p-12"
+            >
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-base text-[#212121] mb-3">
+                    Name
+                  </label>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-sm tracking-widest uppercase text-[#212121]/60 mb-2">
-                        Name <span className="text-red-500">*</span>
-                      </label>
                       <input
                         type="text"
                         required
-                        value={formData.name}
+                        value={formData.firstName}
                         onChange={(e) =>
-                          setFormData({ ...formData, name: e.target.value })
+                          setFormData({
+                            ...formData,
+                            firstName: e.target.value,
+                          })
                         }
-                        className="w-full border border-[#212121]/20 rounded-[15px] bg-transparent py-3 px-4 text-[#212121] focus:border-[#212121] focus:outline-none transition-colors"
+                        className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] focus:outline-none focus:bg-[#e7e4db]"
                       />
+                      <p className="text-xs text-[#212121]/60 mt-1">
+                        First Name{" "}
+                        <span className="text-[#212121]/40">(required)</span>
+                      </p>
                     </div>
-
                     <div>
-                      <label className="block text-sm tracking-widest uppercase text-[#212121]/60 mb-2">
-                        Email Address <span className="text-red-500">*</span>
-                      </label>
                       <input
-                        type="email"
+                        type="text"
                         required
-                        value={formData.email}
+                        value={formData.lastName}
                         onChange={(e) =>
-                          setFormData({ ...formData, email: e.target.value })
+                          setFormData({
+                            ...formData,
+                            lastName: e.target.value,
+                          })
                         }
-                        className="w-full border border-[#212121]/20 rounded-[15px] bg-transparent py-3 px-4 text-[#212121] focus:border-[#212121] focus:outline-none transition-colors"
+                        className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] focus:outline-none focus:bg-[#e7e4db]"
                       />
+                      <p className="text-xs text-[#212121]/60 mt-1">
+                        Last Name{" "}
+                        <span className="text-[#212121]/40">(required)</span>
+                      </p>
                     </div>
+                  </div>
+                </div>
 
-                    <div>
-                      <label className="block text-sm tracking-widest uppercase text-[#212121]/60 mb-2">
-                        Phone
-                      </label>
-                      <input
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) =>
-                          setFormData({ ...formData, phone: e.target.value })
-                        }
-                        className="w-full border border-[#212121]/20 rounded-[15px] bg-transparent py-3 px-4 text-[#212121] focus:border-[#212121] focus:outline-none transition-colors"
-                      />
-                    </div>
+                <div>
+                  <label className="block text-base text-[#212121] mb-3">
+                    Email Address{" "}
+                    <span className="text-[#212121]/40 text-sm">
+                      (required)
+                    </span>
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
+                    className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] focus:outline-none focus:bg-[#e7e4db]"
+                  />
+                </div>
 
-                    <div>
-                      <label className="block text-sm tracking-widest uppercase text-[#212121]/60 mb-3">
-                        How did you hear about us?
-                      </label>
-                      <div className="flex flex-wrap gap-3">
-                        {referralOptions.map((option) => (
-                          <button
-                            key={option}
-                            type="button"
-                            onClick={() => handleCheckbox(option)}
-                            className={`px-4 py-2 text-sm border rounded-full transition-all duration-200 ${
-                              formData.heardAbout.includes(option)
-                                ? "bg-[#212121] text-white border-[#212121]"
-                                : "border-[#212121]/20 text-[#212121]/70 hover:border-[#212121]"
+                <div>
+                  <label className="block text-base text-[#212121] mb-3">
+                    Phone
+                  </label>
+                  <input
+                    type="tel"
+                    value={formData.phone}
+                    onChange={(e) =>
+                      setFormData({ ...formData, phone: e.target.value })
+                    }
+                    className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] focus:outline-none focus:bg-[#e7e4db]"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-base text-[#212121] mb-3">
+                    How did you hear about us?{" "}
+                    <span className="text-[#212121]/40 text-sm">
+                      (required)
+                    </span>
+                  </label>
+                  <div className="space-y-3">
+                    {referralOptions.map((option) => {
+                      const checked = formData.heardAbout.includes(option);
+                      return (
+                        <label
+                          key={option}
+                          className="flex items-center gap-3 cursor-pointer group"
+                        >
+                          <span
+                            className={`w-4 h-4 border flex items-center justify-center transition-colors ${
+                              checked
+                                ? "bg-[#a08858] border-[#a08858]"
+                                : "border-[#212121]/40 group-hover:border-[#212121]"
                             }`}
                           >
+                            {checked && (
+                              <svg
+                                viewBox="0 0 12 12"
+                                fill="none"
+                                stroke="white"
+                                strokeWidth="2"
+                                className="w-3 h-3"
+                              >
+                                <polyline points="2.5 6 5 8.5 9.5 3.5" />
+                              </svg>
+                            )}
+                          </span>
+                          <input
+                            type="checkbox"
+                            checked={checked}
+                            onChange={() => handleCheckbox(option)}
+                            className="sr-only"
+                          />
+                          <span className="text-sm text-[#212121]">
                             {option}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-sm tracking-widest uppercase text-[#212121]/60 mb-2">
-                        Message <span className="text-red-500">*</span>
-                      </label>
-                      <textarea
-                        required
-                        rows={4}
-                        value={formData.message}
-                        onChange={(e) =>
-                          setFormData({ ...formData, message: e.target.value })
-                        }
-                        className="w-full border border-[#212121]/20 rounded-[15px] bg-transparent py-3 px-4 text-[#212121] focus:border-[#212121] focus:outline-none transition-colors resize-none"
-                      />
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="w-full bg-[#f0cc75] hover:bg-[#e0bc65] text-black py-4 text-sm tracking-widest uppercase font-medium transition-colors duration-300 rounded-[15px]"
-                    >
-                      Submit
-                    </button>
+                          </span>
+                        </label>
+                      );
+                    })}
                   </div>
-                </form>
-              )}
-            </div>
-          </div>
+                </div>
+
+                <div>
+                  <label className="block text-base text-[#212121] mb-3">
+                    If you heard of Mudras through a referral or other, tell us
+                    more
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.referralDetails}
+                    onChange={(e) =>
+                      setFormData({
+                        ...formData,
+                        referralDetails: e.target.value,
+                      })
+                    }
+                    className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] focus:outline-none focus:bg-[#e7e4db]"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-base text-[#212121] mb-3">
+                    Message{" "}
+                    <span className="text-[#212121]/40 text-sm">
+                      (required)
+                    </span>
+                  </label>
+                  <textarea
+                    required
+                    rows={5}
+                    value={formData.message}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
+                    className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] focus:outline-none focus:bg-[#e7e4db] resize-none"
+                  />
+                </div>
+
+                <div className="flex justify-center pt-2">
+                  <button
+                    type="submit"
+                    className="bg-[#f0cc75] hover:bg-[#e0bc65] text-black px-12 py-3 text-sm tracking-widest uppercase font-medium transition-colors"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </div>
+            </form>
+          )}
         </div>
       </section>
 
@@ -285,70 +339,66 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-stone-100">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <Image
-              src="/images/icon.webp"
-              alt="Mudras Icon"
-              width={30}
-              height={30}
-              className="object-contain mx-auto mb-6"
-            />
-            <h2 className="text-3xl lg:text-[42px] font-light tracking-wide text-[#212121] leading-tight">
-              Frequently Asked Questions
-            </h2>
-          </div>
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-[#0c0c0c]">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-start">
+            <div>
+              <h2 className="text-3xl lg:text-[42px] font-light tracking-wide text-[#f0cc75] leading-tight">
+                Frequently Asked Questions
+              </h2>
+            </div>
 
-          <div className="w-full space-y-0">
-            {faqs.map((f, i) => {
-              const isOpen = openFAQ === i;
-              return (
-                <div
-                  key={i}
-                  className="border-b border-[#212121]/10 overflow-hidden"
-                >
-                  <button
-                    onClick={() => setOpenFAQ(isOpen ? null : i)}
-                    className="w-full text-left px-2 py-6 flex justify-between items-center group transition-colors"
-                  >
-                    <span className="text-base md:text-[17px] font-normal text-[#212121]">
-                      {f.q}
-                    </span>
-                    <HugeiconsIcon
-                      icon={ArrowDown01Icon}
-                      size={18}
-                      className={`transition-transform duration-300 shrink-0 ml-4 text-[#212121]/40 ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
-                    />
-                  </button>
-
+            <div className="w-full space-y-0">
+              {faqs.map((f, i) => {
+                const isOpen = openFAQ === i;
+                return (
                   <div
-                    className={`grid transition-all duration-300 ease-in-out ${
-                      isOpen
-                        ? "grid-rows-[1fr] opacity-100"
-                        : "grid-rows-[0fr] opacity-0"
-                    }`}
+                    key={i}
+                    className="border-b border-white/10 overflow-hidden"
                   >
-                    <div className="overflow-hidden">
-                      <div className="px-2 pb-6 text-[#212121]/70 leading-relaxed text-base">
-                        {f.a}
+                    <button
+                      onClick={() => setOpenFAQ(isOpen ? null : i)}
+                      className="w-full text-left px-2 py-6 flex justify-between items-center gap-4 group transition-colors"
+                    >
+                      <span className="text-base md:text-[17px] font-normal text-[#fffcf2]">
+                        {f.q}
+                      </span>
+                      <HugeiconsIcon
+                        icon={PlusSignIcon}
+                        size={20}
+                        strokeWidth={1.5}
+                        className={`transition-transform duration-300 shrink-0 ml-4 text-[#fffcf2]/70 ${
+                          isOpen ? "rotate-45" : ""
+                        }`}
+                      />
+                    </button>
+
+                    <div
+                      className={`grid transition-all duration-300 ease-in-out ${
+                        isOpen
+                          ? "grid-rows-[1fr] opacity-100"
+                          : "grid-rows-[0fr] opacity-0"
+                      }`}
+                    >
+                      <div className="overflow-hidden">
+                        <div className="px-2 pb-6 text-[#fffcf2]/70 leading-relaxed text-base">
+                          {f.a}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
 
-          <div className="text-center mt-12">
-            <Link
-              href="/faq"
-              className="bg-[#f0cc75] uppercase hover:bg-[#e0bc65] text-black px-8 py-4 font-medium tracking-wide transition-colors inline-block"
-            >
-              View All FAQs
-            </Link>
+              <div className="mt-10">
+                <Link
+                  href="/faq"
+                  className="bg-[#f0cc75] uppercase hover:bg-[#e0bc65] text-black px-8 py-4 font-medium tracking-wide transition-colors inline-block"
+                >
+                  View All FAQs
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

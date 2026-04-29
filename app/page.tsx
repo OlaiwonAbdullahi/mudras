@@ -17,8 +17,9 @@ export default function Home() {
       <Schedule />
       <Therapist />
       <Benefits />
-      <Testimonials />
+     
       <Newsletter />
+       <Testimonials />
       <FAQ />
     </div>
   );

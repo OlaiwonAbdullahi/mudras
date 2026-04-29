@@ -20,45 +20,39 @@ export default async function BlogPostPage({
   }
 
   const { prev, next } = getAdjacentPosts(slug);
+  const heroImage = post.image || "/images/service1.webp";
 
   return (
     <div className="flex flex-col flex-1">
-      {/* Hero Section */}
-      <section className="relative w-full flex items-center justify-center overflow-hidden pt-44 pb-24 bg-stone-100">
-        <div className="relative z-10 w-full px-6 lg:px-12 text-center flex flex-col items-center">
-          <Image
-            src="/images/icon.webp"
-            alt="Mudras Icon"
-            width={30}
-            height={30}
-            className="object-contain mb-8"
-          />
-          <h1 className="text-3xl lg:text-5xl font-light tracking-wide text-[#212121] mb-6 max-w-3xl leading-tight text-balance">
+      {/* Article */}
+      <section className="pt-32 md:pt-40 pb-16 md:pb-24 px-6 md:px-12 lg:px-20 bg-[#fffcf2]">
+        <article className="max-w-3xl mx-auto">
+          <h1 className="text-3xl lg:text-[42px] font-light tracking-wide text-[#212121] mb-10 leading-tight text-balance text-center">
             {post.title}
           </h1>
-          <p className="text-sm text-[#212121]/40 tracking-widest uppercase">
-            {post.date} &middot; {post.author}
-          </p>
-          <div className="mt-6 flex justify-center">
-            <span className="ornament" />
-          </div>
-        </div>
-      </section>
 
-      {/* Article Content */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-stone-100">
-        <article className="max-w-3xl mx-auto">
           {post.content.map((section, i) => (
-            <div key={i} className="mb-10">
+            <div key={i}>
+              {i === 1 && (
+                <div className="my-10 md:my-14">
+                  <Image
+                    src={heroImage}
+                    alt={post.title}
+                    width={1200}
+                    height={750}
+                    className="w-full h-auto object-cover grayscale"
+                  />
+                </div>
+              )}
               {section.heading && (
-                <h2 className="text-2xl lg:text-3xl font-light tracking-wide text-[#212121] mb-6 leading-tight">
+                <h2 className="text-xl lg:text-2xl font-light tracking-wide text-[#212121] mb-5 mt-4 leading-tight">
                   {section.heading}
                 </h2>
               )}
               {section.paragraphs.map((p, j) => (
                 <p
                   key={j}
-                  className="text-[#212121]/80 text-base md:text-[17px] leading-relaxed mb-6 last:mb-0"
+                  className="text-[#212121]/80 text-base md:text-[17px] leading-relaxed mb-5 last:mb-0"
                 >
                   {p}
                 </p>

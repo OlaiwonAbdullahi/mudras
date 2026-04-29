@@ -107,52 +107,65 @@ export default function FAQPage() {
   return (
     <div className="flex flex-col flex-1">
       {/* Hero Section */}
-      <section className="relative w-full flex items-center justify-center overflow-hidden pt-44 pb-24 bg-stone-100">
-        <div className="relative z-10 w-full px-6 lg:px-12 text-center flex flex-col items-center">
-          <Image
-            src="/images/icon.webp"
-            alt="Mudras Icon"
-            width={30}
-            height={30}
-            className="object-contain mb-8"
-          />
-          <h1 className="text-5xl lg:text-7xl font-light tracking-wide text-[#212121] mb-6">
+      <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 z-0 grayscale"
+          style={{
+            backgroundImage: "url(/images/abouthero.webp)",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        >
+          <div className="absolute inset-0 bg-black/55" />
+        </div>
+        <div className="relative z-10 w-full px-6 lg:px-12 text-center flex flex-col items-center pt-44 pb-24">
+          <h1 className="text-5xl lg:text-7xl font-light tracking-wide text-[#fffcf2] mb-10">
             FAQ
           </h1>
-          <div className="mt-2 flex justify-center">
-            <span className="ornament" />
-          </div>
+          <Link
+            href="/contact"
+            className="bg-[#f0cc75] uppercase hover:bg-[#e0bc65] text-black px-8 py-4 font-medium tracking-wide transition-colors inline-block"
+          >
+            Book Your Session
+          </Link>
         </div>
       </section>
 
       {/* FAQ Content */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-stone-100">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-[#fffcf2]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12 md:mb-16">
+            <Image
+              src="/images/icon.webp"
+              alt="Mudras Icon"
+              width={30}
+              height={30}
+              className="object-contain mx-auto mb-6"
+            />
             <h2 className="text-3xl lg:text-[42px] font-light tracking-wide text-[#212121] leading-tight">
               Frequently Asked Questions
             </h2>
           </div>
 
-          <div className="w-full space-y-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
             {faqs.map((f, i) => {
               const isOpen = openIndex === i;
               return (
                 <div
                   key={i}
-                  className="border-b border-[#212121]/10 overflow-hidden"
+                  className="border border-[#a08858]/40 rounded-md overflow-hidden h-fit"
                 >
                   <button
                     onClick={() => toggleFAQ(i)}
-                    className="w-full text-left px-2 py-6 flex justify-between items-center group transition-colors"
+                    className="w-full text-left px-5 py-4 flex justify-between items-center gap-4 transition-colors"
                   >
-                    <span className="text-base md:text-[17px] font-normal text-[#212121]">
+                    <span className="text-sm md:text-[15px] font-normal text-[#212121]">
                       {f.q}
                     </span>
                     <HugeiconsIcon
                       icon={ArrowDown01Icon}
                       size={18}
-                      className={`transition-transform duration-300 shrink-0 ml-4 text-[#212121]/40 ${
+                      className={`transition-transform duration-300 shrink-0 text-[#a08858] ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />
@@ -166,7 +179,7 @@ export default function FAQPage() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <div className="px-2 pb-6 text-[#212121]/70 leading-relaxed text-base">
+                      <div className="px-5 pb-5 text-[#212121]/70 leading-relaxed text-sm md:text-[15px]">
                         {f.a}
                       </div>
                     </div>
@@ -176,13 +189,46 @@ export default function FAQPage() {
             })}
           </div>
 
-          <div className="mt-16 text-center">
-            <Link
-              href="/contact"
-              className="bg-[#f0cc75] uppercase hover:bg-[#e0bc65] text-black px-8 py-4 font-medium tracking-wide transition-colors inline-block"
-            >
-              Schedule Your Consultation
-            </Link>
+        </div>
+      </section>
+
+      {/* Still Have Questions */}
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-[#EDE9DF]">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="relative">
+              <Image
+                src="/images/tera1.webp"
+                alt="Mudras massage therapy"
+                width={800}
+                height={800}
+                className="w-full aspect-square object-cover grayscale"
+              />
+            </div>
+            <div>
+              <Image
+                src="/images/icon.webp"
+                alt="Mudras Icon"
+                width={30}
+                height={30}
+                className="object-contain mb-6"
+              />
+              <h2 className="text-3xl lg:text-[42px] font-light tracking-wide text-[#212121] mb-6 leading-tight">
+                Still Have Questions?
+              </h2>
+              <p className="text-[#212121]/80 text-base lg:text-[17px] leading-relaxed max-w-md mb-10 font-light">
+                We&apos;re here for you. Whether you&apos;re curious about
+                specific techniques, wondering which session length suits your
+                needs, or want to discuss how massage therapy can support your
+                goals, our team is ready to help.
+              </p>
+              <Link
+                href="/contact"
+                className="bg-[#f0cc75] uppercase hover:bg-[#e0bc65] text-black px-8 py-4 text-sm tracking-widest font-medium transition-colors inline-block"
+              >
+                Schedule Your Consultation
+              </Link>
+            </div>
           </div>
         </div>
       </section>

@@ -23,7 +23,7 @@ const Therapist = () => (
           src={img2}
           alt="Mudras Chelsea studio interior"
           loading="lazy"
-          className="w-full aspect-[5/4] object-cover"
+          className="w-full aspect-[6/4] object-cover"
         />
         <div>
           <h3 className="text-black text-3xl md:text-4xl font-light leading-tight">

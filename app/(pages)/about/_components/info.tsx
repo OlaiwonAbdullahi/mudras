@@ -5,14 +5,14 @@ const Info = () => {
     <div>
       {" "}
       <section className=" p-20 pt-30 pb-10 bg-[#EDE9DF]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen gap-10">
+        <div className="grid grid-cols-1 items-center  lg:grid-cols-2 min-h-screen gap-10">
           <div className="relative overflow-hidden order-2 lg:order-1">
             <Image
               src="/images/abiutinfo.webp"
               alt="Therapeutic massage treatment"
               width={800}
               height={600}
-              className="w-full h-full object-cover"
+              className=" object-cover "
             />
           </div>
           <div className="  flex flex-col justify-center order-1 lg:order-2">
