@@ -54,17 +54,11 @@ const Navbar = () => {
         <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-12 py-4 lg:py-6 h-20 lg:h-26">
           {/* Desktop Menu */}
           <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
-            <DropdownMenuTrigger
-              className="hidden underline uppercase lg:block text-sm tracking-wide hover:text-accent transition-colors cursor-pointer"
-              onMouseEnter={() => setIsOpen(true)}
-              onMouseLeave={() => setIsOpen(false)}
-            >
+            <DropdownMenuTrigger className="hidden underline uppercase lg:block text-sm tracking-wide cursor-pointer">
               Menu
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="start"
-              onMouseEnter={() => setIsOpen(true)}
-              onMouseLeave={() => setIsOpen(false)}
               className="border bg-[#212121] border-none w-fit rounded-none text-white px-3"
             >
               {menuItems.map((item) => (

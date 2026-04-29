@@ -153,7 +153,7 @@ export default function FAQPage() {
               return (
                 <div
                   key={i}
-                  className="border border-[#a08858]/40 rounded-md overflow-hidden h-fit"
+                  className="border border-[#a08858]/40 rounded-md overflow-hidden h-fit transition-colors duration-300 hover:border-[#a08858]"
                 >
                   <button
                     onClick={() => toggleFAQ(i)}

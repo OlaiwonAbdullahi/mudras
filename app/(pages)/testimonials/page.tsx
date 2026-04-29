@@ -230,7 +230,7 @@ export default function TestimonialsPage() {
             {testimonials.map((t) => (
               <div
                 key={t.name}
-                className="border border-[#212121]/15 rounded-xl p-8 md:p-10 bg-transparent flex flex-col"
+                className="border border-[#212121]/15 rounded-xl p-8 md:p-10 bg-transparent flex flex-col transition-all duration-500 hover:border-[#a08858]/60 hover:shadow-md hover:-translate-y-1"
               >
                 <div className="flex justify-between items-start gap-4 mb-6">
                   <div>

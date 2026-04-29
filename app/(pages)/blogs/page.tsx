@@ -91,7 +91,7 @@ export default function BlogsPage() {
               return (
                 <article
                   key={i}
-                  className="border border-[#212121]/15 rounded-md overflow-hidden bg-transparent group flex flex-col"
+                  className="border border-[#212121]/15 rounded-md overflow-hidden bg-transparent group flex flex-col transition-all duration-500 hover:border-[#a08858]/60 hover:shadow-md hover:-translate-y-1"
                 >
                   <div className="p-4">
                     <div className="relative aspect-[16/10] overflow-hidden">
@@ -99,7 +99,7 @@ export default function BlogsPage() {
                         src={image}
                         alt={post.title}
                         fill
-                        className="object-cover grayscale"
+                        className="object-cover grayscale transition-transform duration-700 group-hover:scale-105"
                       />
                     </div>
                   </div>

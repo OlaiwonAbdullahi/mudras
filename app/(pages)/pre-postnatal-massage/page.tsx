@@ -115,7 +115,7 @@ export default function PrePostnatalPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <div className="border border-[#a08858]/40 p-8 md:p-10 text-center">
+            <div className="border border-[#a08858]/40 p-8 md:p-10 text-center transition-all duration-500 hover:border-[#a08858] hover:shadow-md hover:-translate-y-1">
               <HugeiconsIcon
                 icon={Check}
                 size={40}
@@ -133,7 +133,7 @@ export default function PrePostnatalPage() {
                 response.
               </p>
             </div>
-            <div className="border border-[#a08858]/40 p-8 md:p-10 text-center">
+            <div className="border border-[#a08858]/40 p-8 md:p-10 text-center transition-all duration-500 hover:border-[#a08858] hover:shadow-md hover:-translate-y-1">
               <HugeiconsIcon
                 icon={Check}
                 size={40}
@@ -149,7 +149,7 @@ export default function PrePostnatalPage() {
                 Every decision reflects our commitment to your wellbeing.
               </p>
             </div>
-            <div className="border border-[#a08858]/40 p-8 md:p-10 text-center">
+            <div className="border border-[#a08858]/40 p-8 md:p-10 text-center transition-all duration-500 hover:border-[#a08858] hover:shadow-md hover:-translate-y-1">
               <HugeiconsIcon
                 icon={Check}
                 size={40}
