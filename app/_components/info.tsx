@@ -47,8 +47,6 @@ const Info = () => {
                 elsewhere.
               </p>
             </div>
-
-            {/* CTA Button */}
             <button className="bg-[#f0cc75] hover:bg-accent/90 text-black px-8 py-4 mt-8 font-medium tracking-wide transition-colors w-fit">
               EXPERIENCE THE DIFFERENCE
             </button>

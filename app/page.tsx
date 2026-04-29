@@ -1,5 +1,6 @@
 import Hero from "./_components/hero";
 import Info from "./_components/info";
+import Schedule from "./_components/schedule";
 import Services from "./_components/services";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Info />
       <Services />
+      <Schedule />
     </div>
   );
 }

@@ -36,7 +36,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 pt-2.5 transition-colors duration-300 ${isScrolled ? "bg-[#212121]" : ""}`}
+      className={`fixed top-0 w-full text-white z-50 pt-2.5 transition-colors duration-300 ${isScrolled ? "bg-[#212121]" : ""}`}
     >
       <nav className="flex items-center justify-between px-6 lg:px-12 py-6 h-26">
         <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
