@@ -22,7 +22,7 @@ const Info = () => {
                 className="object-contain"
               />
             </div>
-            <h2 className="text-4xl lg:text-4xl font-light tracking-wide text-foreground mb-8 leading-tight text-balance">
+            <h2 className="text-3xl lg:text-4xl font-light tracking-wide text-foreground mb-8 leading-tight text-balance">
               When Standard Massage <br /> Isn&apos;t Enough, Try a <br />
               Therapeutic Sports Massage
             </h2>

@@ -1,5 +1,8 @@
+import Benefits from "./_components/benefits";
+import FAQ from "./_components/faq";
 import Hero from "./_components/hero";
 import Info from "./_components/info";
+import Newsletter from "./_components/newsletter";
 import Schedule from "./_components/schedule";
 import Services from "./_components/services";
 import Therapist from "./_components/therapist";
@@ -12,6 +15,9 @@ export default function Home() {
       <Services />
       <Schedule />
       <Therapist />
+      <Benefits />
+      <Newsletter />
+      <FAQ />
     </div>
   );
 }
