@@ -1,6 +1,5 @@
 import Benefits from "./_components/benefits";
 import FAQ from "./_components/faq";
-import Footer from "./_components/footer";
 import Hero from "./_components/hero";
 import Info from "./_components/info";
 import Newsletter from "./_components/newsletter";
@@ -19,7 +18,6 @@ export default function Home() {
       <Benefits />
       <Newsletter />
       <FAQ />
-      <Footer />
     </div>
   );
 }
