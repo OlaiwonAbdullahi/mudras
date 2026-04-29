@@ -14,8 +14,8 @@ const Offers = () => {
 
   return (
     <div>
-      <section className="p-10 md:p-20 bg-[#EDE9DF]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <section className="px-6 py-12 md:p-20 bg-[#EDE9DF]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div className="relative overflow-hidden order-2 lg:order-2">
             <Image
               src="/images/aboutoffers.webp"
@@ -26,7 +26,7 @@ const Offers = () => {
             />
           </div>
           <div className="flex flex-col justify-center order-1 lg:order-1">
-            <div className="mb-8">
+            <div className="mb-6 md:mb-8">
               <Image
                 src={"/images/icon.webp"}
                 alt="Mudras Logo"
@@ -35,7 +35,7 @@ const Offers = () => {
                 className="object-contain"
               />
             </div>
-            <h2 className="text-3xl lg:text-[42px] font-light tracking-wide text-foreground mb-12 leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[42px] font-light tracking-wide text-foreground mb-8 md:mb-12 leading-tight">
               Key Offerings Include:
             </h2>
             <div className="space-y-4">

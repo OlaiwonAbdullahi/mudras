@@ -35,10 +35,10 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-14 md:py-20 px-20 bg-[#212121] text-white">
-      <div className="flex flex-col md:flex-row gap-16 md:gap-24">
+    <section className="py-14 md:py-20 px-6 md:px-12 lg:px-20 bg-[#212121] text-white">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-24">
         <div className="md:w-1/2">
-          <h2 className="text-3xl lg:text-4xl font-light tracking-wide text-[#f0cc75] mb-8 leading-tight text-balance">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-wide text-[#f0cc75] mb-4 md:mb-8 leading-tight text-balance">
             Frequently Asked Questions
           </h2>
         </div>

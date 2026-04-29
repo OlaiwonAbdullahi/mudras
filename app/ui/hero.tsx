@@ -19,7 +19,7 @@ const Hero = ({
   backgroundImage = "/images/hero-bg.jpg",
 }: HeroProps) => {
   return (
-    <div className="relative w-full h-[85vh] flex flex-col pt-10">
+    <div className="relative w-full min-h-[70vh] md:h-[85vh] flex flex-col pt-10">
       <div
         className="absolute inset-0 bg-cover bg-center grayscale"
         style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -27,13 +27,13 @@ const Hero = ({
         <div className="absolute inset-0 bg-black/30" />
       </div>
       <div className="relative z-10 flex flex-col h-full">
-        <div className="flex-1 flex flex-col items-center justify-center px-6">
-          <h1 className="text-3xl md:text-[56px] text-[#fffcf2] font-light text-center mb-8 tracking-wide">
+        <div className="flex-1 flex flex-col items-center justify-center px-6 py-24 md:py-0">
+          <h1 className="text-3xl sm:text-4xl md:text-[56px] text-[#fffcf2] font-light text-center mb-6 md:mb-8 tracking-wide leading-tight">
             {title}
           </h1>
 
           {subtitle && (
-            <p className="text-white text-lg md:text-xl text-center mb-16 max-w-2xl">
+            <p className="text-white text-base md:text-xl text-center mb-10 md:mb-16 max-w-2xl">
               {subtitle}
             </p>
           )}
@@ -41,7 +41,7 @@ const Hero = ({
           {buttonText && (
             <button
               onClick={onButtonClick}
-              className="bg-[#f0cc75] text-black px-12 py-5 font-normal tracking-wide hover:bg-[#e0bc65] transition duration-300"
+              className="bg-[#f0cc75] text-black px-8 md:px-12 py-4 md:py-5 text-sm md:text-base font-normal tracking-wide hover:bg-[#e0bc65] transition duration-300"
             >
               {buttonText}
             </button>

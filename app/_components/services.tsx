@@ -3,8 +3,8 @@ import sports from "@/public/images/service2.webp";
 import Image from "next/image";
 
 const Services = () => (
-  <section className="py-16 md:py-16 bg-stone-50">
-    <div className=" p-10">
+  <section className="py-12 md:py-16 bg-stone-50">
+    <div className="px-6 md:px-10">
       <div className="text-center max-w-3xl mx-auto">
         <Image
           src={"/images/icon.webp"}
@@ -13,16 +13,15 @@ const Services = () => (
           height={30}
           className="object-contain mx-auto"
         />
-        <h2 className=" text-3xl md:text-[42px]  mt-6 leading-tight">
-          Deep Tissue &amp; Athletic Massage <br /> Therapy in NYC for Total
-          Recovery
+        <h2 className="text-2xl sm:text-3xl md:text-[42px] mt-6 leading-tight text-balance">
+          Deep Tissue & Athletic Massage Therapy in NYC for Total Recovery
         </h2>
-        <div className="mt-8 flex justify-center">
+        <div className="mt-6 md:mt-8 flex justify-center">
           <span className="ornament" />
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-4 mt-20">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-4 mt-12 md:mt-20">
         {[
           {
             img: bodyReset,

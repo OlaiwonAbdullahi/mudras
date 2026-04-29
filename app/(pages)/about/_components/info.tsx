@@ -3,20 +3,19 @@ import Image from "next/image";
 const Info = () => {
   return (
     <div>
-      {" "}
-      <section className=" p-20 pt-30 pb-10 bg-[#EDE9DF]">
-        <div className="grid grid-cols-1 items-center  lg:grid-cols-2 min-h-screen gap-10">
+      <section className="px-6 py-16 md:p-20 md:pt-30 md:pb-10 bg-[#EDE9DF]">
+        <div className="grid grid-cols-1 items-center lg:grid-cols-2 gap-8 md:gap-10">
           <div className="relative overflow-hidden order-2 lg:order-1">
             <Image
               src="/images/abiutinfo.webp"
               alt="Therapeutic massage treatment"
               width={800}
               height={600}
-              className=" object-cover "
+              className="w-full h-auto object-cover"
             />
           </div>
-          <div className="  flex flex-col justify-center order-1 lg:order-2">
-            <div className="text-4xl mb-8">
+          <div className="flex flex-col justify-center order-1 lg:order-2">
+            <div className="mb-6 md:mb-8">
               <Image
                 src={"/images/icon.webp"}
                 alt="Mudras Logo"
@@ -25,11 +24,10 @@ const Info = () => {
                 className="object-contain"
               />
             </div>
-            <h2 className="text-3xl lg:text-[42px] font-light tracking-wide text-foreground mb-8 leading-tight text-balance">
-              Expert massage therapy <br />
-              for body and soul
+            <h2 className="text-2xl sm:text-3xl lg:text-[42px] font-light tracking-wide text-foreground mb-6 md:mb-8 leading-tight text-balance">
+              Expert massage therapy for body and soul
             </h2>
-            <div className="space-y-6 text-base lg:text-[17px] w-[80%] leading-relaxed text-foreground/90 font-light">
+            <div className="space-y-5 md:space-y-6 text-base lg:text-[17px] w-full md:w-[80%] leading-relaxed text-foreground/90 font-light">
               <p>Mudras treatments are personally tailored.</p>
 
               <p>

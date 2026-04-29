@@ -3,9 +3,9 @@ import img2 from "@/public/images/tera2.webp";
 import Image from "next/image";
 
 const Therapist = () => (
-  <section className="py-8 md:py-20 px-15">
+  <section className="py-12 md:py-20 px-6 md:px-12 lg:px-15">
     <div className="">
-      <div className="text-center max-w-3xl mx-auto mb-20">
+      <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
         <Image
           src={"/images/icon.webp"}
           alt="Mudras Logo"
@@ -13,12 +13,12 @@ const Therapist = () => (
           height={30}
           className="object-contain flex items-center justify-center mx-auto mb-4"
         />
-        <h2 className="text-4xl lg:text-4xl font-light tracking-wide text-foreground mb-8 leading-tight text-balance">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-wide text-foreground mb-6 md:mb-8 leading-tight text-balance">
           Work With A Top-Rated Sports Massage Therapist
         </h2>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
         <Image
           src={img2}
           alt="Mudras Chelsea studio interior"
@@ -26,10 +26,10 @@ const Therapist = () => (
           className="w-full aspect-[6/4] object-cover"
         />
         <div>
-          <h3 className="text-black text-3xl md:text-4xl font-light leading-tight">
+          <h3 className="text-black text-2xl sm:text-3xl md:text-4xl font-light leading-tight">
             Meet Our NYC Massage Therapist Specializing in Athletic Massage
           </h3>
-          <p className="mt-6 text-[#121212] leading-relaxed text-[17px]">
+          <p className="mt-4 md:mt-6 text-[#121212] leading-relaxed text-base md:text-[17px]">
             Cumulative experience between all our team, they bring over 40 years
             of experience to every custom massage session. Professionally
             trained across Western and Eastern massage modalities, they continue
@@ -41,7 +41,7 @@ const Therapist = () => (
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-16 items-center mt-24 md:mt-32">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mt-16 md:mt-32">
         <div className="md:order-2">
           <Image
             src={img1}
@@ -51,10 +51,10 @@ const Therapist = () => (
           />
         </div>
         <div className="md:order-1">
-          <h3 className="text-black text-3xl md:text-4xl font-light leading-tight">
+          <h3 className="text-black text-2xl sm:text-3xl md:text-4xl font-light leading-tight">
             Located in the Heart of Chelsea – Your Go-To Spot for Sports Massage
           </h3>
-          <p className="mt-6 text-[#121212] leading-relaxed text-[17px]">
+          <p className="mt-4 md:mt-6 text-[#121212] leading-relaxed text-base md:text-[17px]">
             At Mudras, every session begins with presence. We listen closely to
             what your body is carrying and tailor the treatment to meet those
             specific needs. No scripts. No formula. Expertly attuned,
