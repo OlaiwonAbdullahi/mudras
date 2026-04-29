@@ -35,7 +35,7 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-14 md:py-20 px-15 bg-[#0a0a0a] text-white">
+    <section className="py-14 md:py-20 px-20 bg-[#212121] text-white">
       <div className="flex flex-col md:flex-row gap-16 md:gap-24">
         <div className="md:w-1/2">
           <h2 className="text-3xl lg:text-4xl font-light tracking-wide text-[#f0cc75] mb-8 leading-tight text-balance">
@@ -54,7 +54,7 @@ const FAQ = () => {
                 >
                   <button
                     onClick={() => toggleFAQ(i)}
-                    className="w-full text-left px-5 py-4 flex justify-between items-center group transition-colors"
+                    className="w-full text-left px-5 py-3 flex justify-between items-center group transition-colors"
                   >
                     <span className="text-md md:text-[17px] font-normal transition-colors duration-300 text-white">
                       {f.q}
