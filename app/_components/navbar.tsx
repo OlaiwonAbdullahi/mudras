@@ -52,17 +52,20 @@ const Navbar = () => {
         className={`fixed top-0 w-full text-white z-50 pt-2.5 transition-colors duration-300 ${isScrolled || isMobileMenuOpen ? "bg-[#212121]" : ""}`}
       >
         <nav className="flex items-center justify-between px-4 sm:px-6 lg:px-12 py-4 lg:py-6 h-20 lg:h-26">
-          {/* Desktop Menu */}
           <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
             <DropdownMenuTrigger className="hidden underline uppercase lg:block text-sm tracking-wide cursor-pointer">
               Menu
             </DropdownMenuTrigger>
             <DropdownMenuContent
               align="start"
-              className="border bg-[#212121] border-none w-fit rounded-none text-white px-3"
+              className="border bg-[#212121] border-none w-fit rounded-none text-white px-3 "
             >
               {menuItems.map((item) => (
-                <DropdownMenuItem key={item.href} asChild>
+                <DropdownMenuItem
+                  key={item.href}
+                  asChild
+                  className="pb-o data-highlighted:bg-transparent data-highlighted:text-white/70"
+                >
                   <Link href={item.href} className="w-full cursor-pointer">
                     {item.label}
                   </Link>
@@ -71,7 +74,6 @@ const Navbar = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Mobile hamburger */}
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(true)}
@@ -112,7 +114,6 @@ const Navbar = () => {
         </nav>
       </header>
 
-      {/* Mobile Menu Overlay */}
       <div
         className={`fixed inset-0 z-40 bg-[#212121] lg:hidden transition-opacity duration-300 ${
           isMobileMenuOpen

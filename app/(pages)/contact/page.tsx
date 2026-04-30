@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { PlusSignIcon } from "@hugeicons/core-free-icons";
+import Hero from "@/app/ui/hero";
 
 const referralOptions = [
   "Referral",
@@ -66,32 +67,12 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col flex-1">
-      {/* Hero Section */}
-      <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 z-0 grayscale"
-          style={{
-            backgroundImage: "url(/images/mudrashero.webp)",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        >
-          <div className="absolute inset-0 bg-black/55" />
-        </div>
-        <div className="relative z-10 w-full px-6 lg:px-12 text-center flex flex-col items-center pt-44 pb-24">
-          <h1 className="text-5xl lg:text-7xl font-light tracking-wide text-[#fffcf2] mb-10">
-            Contact Us
-          </h1>
-          <a
-            href="#contact-form"
-            className="bg-[#f0cc75] uppercase hover:bg-[#e0bc65] text-black px-8 py-4 font-medium tracking-wide transition-colors inline-block"
-          >
-            Book Your Session
-          </a>
-        </div>
-      </section>
-
-      {/* Contact Form Section */}
+      <Hero
+        backgroundImage="/images/testhero.webp"
+        title="Contact Us"
+        buttonText=" Book Your Session"
+        buttonLink="#contact-form"
+      />
       <section
         id="contact-form"
         className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-[#fffcf2]"
@@ -108,7 +89,7 @@ export default function ContactPage() {
             <h2 className="text-3xl lg:text-[42px] font-light tracking-wide text-[#212121] leading-tight">
               Get in touch with us
             </h2>
-            <p className="text-[#212121]/70 text-base leading-relaxed mt-6 max-w-xl mx-auto">
+            <p className="text-[#212121]/70 text-[17px] leading-relaxed mt-6 max-w-xl mx-auto">
               To schedule a session or for any other inquiry – please complete
               the form below or email us at{" "}
               <a
@@ -118,7 +99,7 @@ export default function ContactPage() {
                 info@mudras.com
               </a>
             </p>
-            <p className="text-[#212121] text-sm mt-4">
+            <p className="text-[#212121] text-[17px] mt-4 font-medium">
               Bookings by appointment only
             </p>
           </div>
@@ -140,15 +121,16 @@ export default function ContactPage() {
           ) : (
             <form
               onSubmit={handleSubmit}
-              className="border border-[#a08858]/40 p-8 md:p-12"
+              className="border border-[#a08858]/40 p-8 md:p-12 rounded-md"
             >
               <div className="space-y-6">
                 <div>
-                  <label className="block text-base text-[#212121] mb-3">
-                    Name
-                  </label>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
+                      <label className="block text-base text-[#212121] mb-3">
+                        First Name{" "}
+                        <span className="text-[#212121]/40">(required)</span>
+                      </label>
                       <input
                         type="text"
                         required
@@ -159,14 +141,14 @@ export default function ContactPage() {
                             firstName: e.target.value,
                           })
                         }
-                        className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] focus:outline-none focus:bg-[#e7e4db]"
+                        className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] focus:outline-none focus:bg-[#e7e4db] rounded-md"
                       />
-                      <p className="text-xs text-[#212121]/60 mt-1">
-                        First Name{" "}
-                        <span className="text-[#212121]/40">(required)</span>
-                      </p>
                     </div>
                     <div>
+                      <label className="block text-base text-[#212121] mb-3">
+                        Last Name{" "}
+                        <span className="text-[#212121]/40">(required)</span>
+                      </label>
                       <input
                         type="text"
                         required
@@ -177,12 +159,8 @@ export default function ContactPage() {
                             lastName: e.target.value,
                           })
                         }
-                        className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] focus:outline-none focus:bg-[#e7e4db]"
+                        className="w-full bg-[#e7e4db]/70 py-3 rounded-md px-4 text-[#212121] focus:outline-none focus:bg-[#e7e4db]"
                       />
-                      <p className="text-xs text-[#212121]/60 mt-1">
-                        Last Name{" "}
-                        <span className="text-[#212121]/40">(required)</span>
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -201,7 +179,7 @@ export default function ContactPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] focus:outline-none focus:bg-[#e7e4db]"
+                    className="w-full bg-[#e7e4db]/70 py-3 px-4 rounded-md text-[#212121] focus:outline-none focus:bg-[#e7e4db]"
                   />
                 </div>
 
@@ -215,7 +193,7 @@ export default function ContactPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, phone: e.target.value })
                     }
-                    className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] focus:outline-none focus:bg-[#e7e4db]"
+                    className="w-full bg-[#e7e4db]/70 py-3 px-4 rounded-md text-[#212121] focus:outline-none focus:bg-[#e7e4db]"
                   />
                 </div>
 
@@ -235,7 +213,7 @@ export default function ContactPage() {
                           className="flex items-center gap-3 cursor-pointer group"
                         >
                           <span
-                            className={`w-4 h-4 border flex items-center justify-center transition-colors ${
+                            className={`w-5 h-5 border flex items-center rounded-sm justify-center transition-colors ${
                               checked
                                 ? "bg-[#a08858] border-[#a08858]"
                                 : "border-[#212121]/40 group-hover:border-[#212121]"
@@ -282,7 +260,7 @@ export default function ContactPage() {
                         referralDetails: e.target.value,
                       })
                     }
-                    className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] focus:outline-none focus:bg-[#e7e4db]"
+                    className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] rounded-md focus:outline-none focus:bg-[#e7e4db]"
                   />
                 </div>
 
@@ -300,7 +278,7 @@ export default function ContactPage() {
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] focus:outline-none focus:bg-[#e7e4db] resize-none"
+                    className="w-full bg-[#e7e4db]/70 py-3 px-4 text-[#212121] rounded-md focus:outline-none focus:bg-[#e7e4db] resize-none"
                   />
                 </div>
 
@@ -326,8 +304,8 @@ export default function ContactPage() {
           </h2>
           <p className="mt-8 text-white leading-relaxed max-w-2xl mx-auto">
             Your massage therapy journey doesn&apos;t end when you leave our
-            Chelsea location. Our professional-grade Mudras Recovery Cream brings
-            the same expertise to your daily routine.
+            Chelsea location. Our professional-grade Mudras Recovery Cream
+            brings the same expertise to your daily routine.
           </p>
           <Link
             href="#"

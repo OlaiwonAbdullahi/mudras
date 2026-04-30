@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
+import Hero from "@/app/ui/hero";
 
 const faqs = [
   {
@@ -106,30 +107,12 @@ export default function FAQPage() {
 
   return (
     <div className="flex flex-col flex-1">
-      {/* Hero Section */}
-      <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 z-0 grayscale"
-          style={{
-            backgroundImage: "url(/images/abouthero.webp)",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        >
-          <div className="absolute inset-0 bg-black/55" />
-        </div>
-        <div className="relative z-10 w-full px-6 lg:px-12 text-center flex flex-col items-center pt-44 pb-24">
-          <h1 className="text-5xl lg:text-7xl font-light tracking-wide text-[#fffcf2] mb-10">
-            FAQ
-          </h1>
-          <Link
-            href="/contact"
-            className="bg-[#f0cc75] uppercase hover:bg-[#e0bc65] text-black px-8 py-4 font-medium tracking-wide transition-colors inline-block"
-          >
-            Book Your Session
-          </Link>
-        </div>
-      </section>
+      <Hero
+        backgroundImage="/images/faqhero.webp"
+        title="FAQ"
+        buttonText=" Book Your Session"
+        buttonLink="/contact"
+      />
 
       {/* FAQ Content */}
       <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-[#fffcf2]">
@@ -188,7 +171,6 @@ export default function FAQPage() {
               );
             })}
           </div>
-
         </div>
       </section>
 
@@ -241,8 +223,8 @@ export default function FAQPage() {
           </h2>
           <p className="mt-8 text-white leading-relaxed max-w-2xl mx-auto">
             Your massage therapy journey doesn&apos;t end when you leave our
-            Chelsea location. Our professional-grade Mudras Recovery Cream brings
-            the same expertise to your daily routine.
+            Chelsea location. Our professional-grade Mudras Recovery Cream
+            brings the same expertise to your daily routine.
           </p>
           <Link
             href="/contact"
