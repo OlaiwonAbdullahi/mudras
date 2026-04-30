@@ -3,7 +3,7 @@ import Image from "next/image";
 const Info = () => {
   return (
     <div>
-      <section className="px-6 py-16 md:p-20 md:pt-30 md:pb-10 bg-[#EDE9DF]">
+      <section className="px-6 py-16 md:p-20 md:pt-30 md:pb-10 bg-[#FFFCF2]">
         <div className="grid grid-cols-1 items-center lg:grid-cols-2 gap-8 md:gap-10">
           <div className="relative overflow-hidden order-2 lg:order-1">
             <Image

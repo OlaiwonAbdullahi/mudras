@@ -42,7 +42,7 @@ export default function PrePostnatalPage() {
         backgroundImage="/images/p-hero.webp"
       />
 
-      <section className="py-16 md:py-28 px-6 md:px-12 lg:px-20 bg-stone-100">
+      <section className="py-16 md:py-28 px-6 md:px-12 lg:px-20 bg-[#FFFCF2]">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
@@ -85,7 +85,7 @@ export default function PrePostnatalPage() {
       </section>
 
       {/* Why Mudras - Three Pillars */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-[#E7E4DB]">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-[#F2EFE6]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <Image
@@ -101,12 +101,12 @@ export default function PrePostnatalPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            <div className="border border-[#a08858]/40 p-8 md:p-10 text-center transition-all duration-500 hover:border-[#a08858] hover:shadow-md hover:-translate-y-1">
+            <div className="border border-[#B69063] p-8 md:p-10 text-center transition-all duration-500 hover:border-[#a08858] hover:shadow-md hover:-translate-y-1">
               <HugeiconsIcon
                 icon={Check}
                 size={40}
                 strokeWidth={1.5}
-                className="text-[#a08858] mx-auto mb-6"
+                className="text-[#B58F63] mx-auto mb-6"
               />
               <h3 className="text-xl md:text-2xl font-light text-[#212121] mb-5">
                 Two Decades of Specialized Experience
@@ -119,12 +119,12 @@ export default function PrePostnatalPage() {
                 response.
               </p>
             </div>
-            <div className="border border-[#a08858]/40 p-8 md:p-10 text-center transition-all duration-500 hover:border-[#a08858] hover:shadow-md hover:-translate-y-1">
+            <div className="border border-[#B69063] p-8 md:p-10 text-center transition-all duration-500 hover:border-[#a08858] hover:shadow-md hover:-translate-y-1">
               <HugeiconsIcon
                 icon={Check}
                 size={40}
                 strokeWidth={1.5}
-                className="text-[#a08858] mx-auto mb-6"
+                className="text-[#B69063] mx-auto mb-6"
               />
               <h3 className="text-xl md:text-2xl font-light text-[#212121] mb-5">
                 Safety You Can Trust
@@ -135,12 +135,12 @@ export default function PrePostnatalPage() {
                 Every decision reflects our commitment to your wellbeing.
               </p>
             </div>
-            <div className="border border-[#a08858]/40 p-8 md:p-10 text-center transition-all duration-500 hover:border-[#a08858] hover:shadow-md hover:-translate-y-1">
+            <div className="border border-[#B69063] p-8 md:p-10 text-center transition-all duration-500 hover:border-[#a08858] hover:shadow-md hover:-translate-y-1">
               <HugeiconsIcon
                 icon={Check}
                 size={40}
                 strokeWidth={1.5}
-                className="text-[#a08858] mx-auto mb-6"
+                className="text-[#B69063] mx-auto mb-6"
               />
               <h3 className="text-xl md:text-2xl font-light text-[#212121] mb-5">
                 Shaped Around You
@@ -157,7 +157,7 @@ export default function PrePostnatalPage() {
       </section>
 
       {/* What Prenatal & Postnatal Massage Offers */}
-      <section className="py-16 md:py-28 px-6 md:px-12 lg:px-20 bg-stone-100">
+      <section className="py-16 md:py-28 px-6 md:px-12 lg:px-20 bg-[#FFFCF2]">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div className="relative">
@@ -188,7 +188,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#B69063] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>
@@ -199,7 +199,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#B69063] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>Improves circulation and reduces swelling</span>
@@ -207,7 +207,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#B69063] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>Supports better sleep quality and deeper rest</span>
@@ -215,7 +215,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#B69063] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>Helps postpartum recovery and realignment</span>
@@ -229,7 +229,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#B69063] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>Time to reconnect with your changing body</span>
@@ -237,7 +237,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#B69063] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>Support for emotional balance during transition</span>
@@ -245,7 +245,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#B69063] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>Permission to simply receive care</span>
@@ -257,7 +257,7 @@ export default function PrePostnatalPage() {
       </section>
 
       {/* Safety Guidelines */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-[#E7E4DB]">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-[#F2EFE6]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <Image
@@ -276,7 +276,7 @@ export default function PrePostnatalPage() {
 
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Do */}
-            <div className="border border-[#a08858]/40 p-8 md:p-10">
+            <div className="border border-[#C1A27B] p-8 md:p-10">
               <h3 className="text-xl md:text-2xl font-light text-[#212121] mb-8 text-center">
                 Do:
               </h3>
@@ -284,7 +284,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#C1A27B] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>
@@ -295,7 +295,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#C1A27B] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>
@@ -306,7 +306,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#C1A27B] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>
@@ -317,7 +317,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#C1A27B] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>Stay hydrated before and after each session</span>
@@ -326,7 +326,7 @@ export default function PrePostnatalPage() {
             </div>
 
             {/* Don't */}
-            <div className="border border-[#a08858]/40 p-8 md:p-10">
+            <div className="border border-[#C1A27B] p-8 md:p-10">
               <h3 className="text-xl md:text-2xl font-light text-[#212121] mb-8 text-center">
                 Don&apos;t:
               </h3>
@@ -334,7 +334,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#C1A27B] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>
@@ -345,7 +345,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#C1A27B] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>
@@ -357,7 +357,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#C1A27B] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>
@@ -368,7 +368,7 @@ export default function PrePostnatalPage() {
                 <li className="flex gap-3 text-[#212121]/80 leading-relaxed">
                   <HugeiconsIcon
                     icon={Check}
-                    className="text-[#a08858] shrink-0 mt-1"
+                    className="text-[#C1A27B] shrink-0 mt-1"
                     strokeWidth={1.5}
                   />
                   <span>

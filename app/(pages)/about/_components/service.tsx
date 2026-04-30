@@ -19,7 +19,7 @@ const Service = () => {
   ];
 
   return (
-    <div className="bg-[#EDE9DF] w-full py-16 md:py-24 px-6">
+    <div className="bg-[#FFFCF2] w-full py-16 md:py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
           <Heading title="The Mudras Specialist Services" />
@@ -29,12 +29,12 @@ const Service = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="border border-[#C4A574] p-6   flex items-center gap-4"
+              className="border border-[#B69063] p-6   flex items-center gap-4"
             >
               <HugeiconsIcon
                 icon={Check}
                 size={24}
-                className="text-[#A0826D] flex-shrink-0 mt-0.5"
+                className="text-[#B69063] flex-shrink-0 mt-0.5"
                 stroke="currentColor"
               />
               <p className="text-gray-800 font-medium leading-snug">

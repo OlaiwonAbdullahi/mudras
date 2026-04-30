@@ -14,7 +14,7 @@ const Offers = () => {
 
   return (
     <div>
-      <section className="px-6 py-12 md:p-20 bg-[#EDE9DF]">
+      <section className="px-6 py-12 md:p-20 bg-[#F2EFE6]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div className="relative overflow-hidden order-2 lg:order-2">
             <Image
@@ -44,7 +44,7 @@ const Offers = () => {
                   <HugeiconsIcon
                     icon={Check}
                     size={24}
-                    className="text-[#A0826D] flex-shrink-0 mt-1"
+                    className="text-[#B69063] flex-shrink-0 mt-1"
                     stroke="currentColor"
                   />
 

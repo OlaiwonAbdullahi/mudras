@@ -43,7 +43,7 @@ export default function FoundersPage() {
       </section>
 
       {/* Yotam Kafri Bio */}
-      <section className="py-16 md:py-28 px-6 md:px-12 lg:px-20 bg-[#EDE9DF]">
+      <section className="py-16 md:py-28 px-6 md:px-12 lg:px-20 bg-[#FFFCF2]">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
@@ -103,7 +103,7 @@ export default function FoundersPage() {
       </section>
 
       {/* Where It Started */}
-      <section className="py-16 md:py-28 px-6 md:px-12 lg:px-20 bg-[#EDE9DF]">
+      <section className="py-16 md:py-28 px-6 md:px-12 lg:px-20 bg-[#F2EFE6]">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
             <div className="relative overflow-hidden order-2 lg:order-1">
@@ -155,7 +155,7 @@ export default function FoundersPage() {
                       ].map((item) => (
                         <li key={item} className="flex items-start gap-3">
                           <svg
-                            className="w-4 h-4 mt-1 text-[#a08858] shrink-0"
+                            className="w-4 h-4 mt-1 text-[#C2A47E] shrink-0"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -178,7 +178,7 @@ export default function FoundersPage() {
                       ].map((item) => (
                         <li key={item} className="flex items-start gap-3">
                           <svg
-                            className="w-4 h-4 mt-1 text-[#a08858] shrink-0"
+                            className="w-4 h-4 mt-1 text-[#C2A47E] shrink-0"
                             viewBox="0 0 24 24"
                             fill="none"
                             stroke="currentColor"
@@ -198,7 +198,7 @@ export default function FoundersPage() {
             </div>
           </div>
 
-          <div className="mt-12 lg:mt-16 border border-[#a08858]/40 p-8 md:p-12">
+          <div className="mt-12 lg:mt-16 border border-[#C2A47E] p-8 md:p-12">
             <p className="font-medium text-foreground mb-6 text-base lg:text-[17px]">
               Where We Work:
             </p>
@@ -211,7 +211,7 @@ export default function FoundersPage() {
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
                   <svg
-                    className="w-4 h-4 mt-1 text-[#a08858] shrink-0"
+                    className="w-4 h-4 mt-1 text-[#C2A47E] shrink-0"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -235,7 +235,7 @@ export default function FoundersPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-16 md:py-28 px-6 md:px-12 lg:px-20 bg-white">
+      <section className="py-16 md:py-28 px-6 md:px-12 lg:px-20 bg-[#FFFCF2]">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
@@ -281,7 +281,7 @@ export default function FoundersPage() {
       </section>
 
       {/* What We Built */}
-      <section className="py-16 md:py-28 px-6 md:px-12 lg:px-20 bg-white">
+      <section className="py-16 md:py-28 px-6 md:px-12 lg:px-20 bg-[#FFFCF2]">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative overflow-hidden order-2 lg:order-1">
@@ -327,7 +327,7 @@ export default function FoundersPage() {
       </section>
 
       {/* Twenty Years, Still Learning */}
-      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-white">
+      <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-[#FFFCF2]">
         <div className="max-w-3xl mx-auto text-center">
           <Image
             src="/images/icon.webp"
