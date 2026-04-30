@@ -3,7 +3,7 @@ import img2 from "@/public/images/tera2.webp";
 import Image from "next/image";
 
 const Therapist = () => (
-  <section className="py-12 md:py-20 px-6 md:px-12 lg:px-15">
+  <section className="py-12 md:py-20 px-6 md:px-12 lg:px-15 bg-[#FFFCF2]">
     <div className="">
       <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
         <Image

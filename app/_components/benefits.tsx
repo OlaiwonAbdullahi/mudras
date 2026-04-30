@@ -1,6 +1,7 @@
 import { Check } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const col1 = [
   "That persistent shoulder tension has melted away completely",
@@ -19,7 +20,7 @@ const List = ({ items }: { items: string[] }) => (
   <ul className="space-y-5">
     {items.map((t) => (
       <li key={t} className="flex gap-4 text-foreground/80 leading-relaxed">
-        <HugeiconsIcon icon={Check} className="text-[#f0cc75] flex-shrink-0" />
+        <HugeiconsIcon icon={Check} className="text-[#B69064] shrink-0" />
         <span>{t}</span>
       </li>
     ))}
@@ -27,7 +28,7 @@ const List = ({ items }: { items: string[] }) => (
 );
 
 const Benefits = () => (
-  <section className="px-6 py-16 md:p-20 bg-stone-100">
+  <section className="px-6 py-16 md:p-20 bg-[#F2EFE6]">
     <div className="container mx-auto">
       <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
         <Image
@@ -43,13 +44,13 @@ const Benefits = () => (
       </div>
 
       <div className="grid md:grid-cols-2 gap-8 md:gap-16 mt-12 md:mt-20">
-        <div className="border border-[#f0cc75] p-6 sm:p-10 md:p-14">
+        <div className="border border-[#B69064] p-6 sm:p-10 md:p-14">
           <p className="text-lg sm:text-xl md:text-2xl mt-3 mb-6 md:mb-8 text-center">
             Mudras Deep Tissue & Sports Massage
           </p>
           <List items={col1} />
         </div>
-        <div className="border border-[#f0cc75] p-6 sm:p-10 md:p-14">
+        <div className="border border-[#B69064] p-6 sm:p-10 md:p-14">
           <p className="text-lg sm:text-xl md:text-2xl mt-3 mb-6 md:mb-8 text-center">
             The Mudras BodyReset Bespoke Therapy
           </p>
@@ -65,9 +66,11 @@ const Benefits = () => (
       </p>
 
       <div className="mt-6 md:mt-8 text-center">
-        <button className="bg-[#f0cc75] uppercase hover:bg-accent/90 text-black px-6 md:px-8 py-3 md:py-4 mt-4 md:mt-8 text-sm md:text-base font-medium tracking-wide transition-colors w-fit">
-          Take the Next Step
-        </button>
+        <Link href={"/contact"}>
+          <button className="bg-[#f0cc75] uppercase hover:bg-accent/90 text-black px-6 md:px-8 py-3 md:py-4 mt-4 md:mt-8 text-sm md:text-base font-medium tracking-wide transition-colors w-fit">
+            Take the Next Step
+          </button>
+        </Link>
       </div>
     </div>
   </section>

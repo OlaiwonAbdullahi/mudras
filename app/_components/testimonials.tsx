@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Testimonials = () => {
   return (
-    <div className="bg-[#E7E4DB] w-full py-16 px-15 flex flex-col ">
+    <div className="bg-[#FFFCF2] w-full py-16 px-15 flex flex-col ">
       <div className="">
         <div className="text-4xl mb-8">
           <Image
@@ -19,7 +20,7 @@ const Testimonials = () => {
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-        <div className="border border-[#212121]/15 p-8">
+        <div className="border border-[#b69064] p-8">
           <p className="text-[#212121] text-[17px] leading-relaxed mb-6">
             &quot;The best most intuitive body work therapist I have ever been
             treated by. Using massage, stretching and incredible knowledge of
@@ -31,7 +32,7 @@ const Testimonials = () => {
             World-Renowned Fashion Photographer
           </p>
         </div>
-        <div className="border border-[#212121]/15 p-8">
+        <div className="border border-[#b69064] p-8">
           <p className="text-[#212121] text-[17px] leading-relaxed mb-6">
             &quot;I send all my clients to Mudras and I don&apos;t preach what I
             haven&apos;t tried first. It&apos;s the place to go, without a
@@ -43,7 +44,7 @@ const Testimonials = () => {
           </p>
           <p className="text-sm text-[#212121] italic">Chiropractor</p>
         </div>
-        <div className="border border-[#212121]/15 p-8">
+        <div className="border border-[#b69064] p-8">
           <p className="text-[#212121] text-[17px] leading-relaxed mb-6">
             &quot;Yotam was the best masseuse I&apos;ve ever had. He really took
             the time to ask and asses where I needed work rather than other
@@ -62,6 +63,13 @@ const Testimonials = () => {
             Doctor of Physical Therapy
           </p>
         </div>
+      </div>
+      <div className="mx-auto flex mt-10">
+        <Link href={"/testimonials"}>
+          <button className="bg-[#f0cc75] uppercase hover:bg-accent/90 text-black px-6 md:px-8 py-3 md:py-4 mt-4 md:mt-8 text-sm md:text-base font-medium tracking-wide transition-colors w-fit">
+            See More
+          </button>
+        </Link>
       </div>
     </div>
   );

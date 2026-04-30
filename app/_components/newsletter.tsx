@@ -7,7 +7,7 @@ const Newsletter = () => {
   return (
     <section className="py-14 md:py-20 px-6 md:px-12 bg-[url('/images/newsletter.webp')] bg-cover bg-center w-full flex items-center justify-center">
       <div className="max-w-4xl text-center">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light tracking-wide text-white mb-6 md:mb-8 leading-tight text-balance">
+        <h2 className="text-2xl sm:text-3xl lg:text-[42px] font-light tracking-wide text-white mb-6 md:mb-8 leading-tight text-balance">
           Extend Your Recovery with Sports Massage Therapy in Chelsea
         </h2>
         <p className="mt-6 md:mt-8 text-sm md:text-base text-white leading-relaxed max-w-2xl mx-auto">

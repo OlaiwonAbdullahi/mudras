@@ -9,7 +9,7 @@ const Schedule = () => {
         fill
         className="object-cover object-top opacity-30 absolute inset-0"
       />
-      <div className="relative z-10 flex flex-col lg:flex-row w-full">
+      <div className="relative z-10 flex flex-col lg:flex-row w-full gap-4">
         <div className="w-full lg:w-1/2">
           <Image
             src={"/images/schedule.webp"}
