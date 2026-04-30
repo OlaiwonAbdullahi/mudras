@@ -177,7 +177,7 @@ const QuoteMark = () => (
   <svg
     viewBox="0 0 24 24"
     fill="currentColor"
-    className="w-10 h-10 text-[#212121] shrink-0 rotate-180"
+    className="w-20 h-20 text-[#1F2C1B] shrink-0 rotate-180"
   >
     <path d="M11 7.05C7.05 7.55 4 10.76 4 14.6V21h7V14H7c0-2.76 1.79-5.1 4.27-5.93L11 7.05zM20 7.05c-3.95.5-7 3.71-7 7.55V21h7V14h-4c0-2.76 1.79-5.1 4.27-5.93L20 7.05z" />
   </svg>

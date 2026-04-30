@@ -6,6 +6,7 @@ import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { PlusSignIcon } from "@hugeicons/core-free-icons";
 import { blogPosts } from "@/lib/blog-data";
+import Hero from "@/app/ui/hero";
 
 const blogFaqs = [
   {
@@ -35,32 +36,12 @@ export default function BlogsPage() {
 
   return (
     <div className="flex flex-col flex-1">
-      {/* Hero Section */}
-      <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 z-0 grayscale"
-          style={{
-            backgroundImage: "url(/images/aboutoffers.webp)",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        >
-          <div className="absolute inset-0 bg-black/55" />
-        </div>
-        <div className="relative z-10 w-full px-6 lg:px-12 text-center flex flex-col items-center pt-44 pb-24">
-          <h1 className="text-5xl lg:text-7xl font-light tracking-wide text-[#fffcf2] mb-10">
-            Blog
-          </h1>
-          <Link
-            href="/contact"
-            className="bg-[#f0cc75] uppercase hover:bg-[#e0bc65] text-black px-8 py-4 font-medium tracking-wide transition-colors inline-block"
-          >
-            Book Your Session
-          </Link>
-        </div>
-      </section>
-
-      {/* Blog Posts */}
+      <Hero
+        buttonLink="/contact"
+        buttonText="Book Your Session"
+        title="Blog"
+        backgroundImage="/images/bloghero.webp"
+      />
       <section className="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-[#fffcf2]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
@@ -91,7 +72,7 @@ export default function BlogsPage() {
               return (
                 <article
                   key={i}
-                  className="border border-[#212121]/15 rounded-md overflow-hidden bg-transparent group flex flex-col transition-all duration-500 hover:border-[#a08858]/60 hover:shadow-md hover:-translate-y-1"
+                  className="border border-[#212121]/50 rounded-md overflow-hidden bg-transparent group flex flex-col transition-all duration-500 hover:border-[#a08858]/60 hover:shadow-md hover:-translate-y-1"
                 >
                   <div className="p-4">
                     <div className="relative aspect-[16/10] overflow-hidden">
@@ -99,7 +80,7 @@ export default function BlogsPage() {
                         src={image}
                         alt={post.title}
                         fill
-                        className="object-cover grayscale transition-transform duration-700 group-hover:scale-105"
+                        className="object-cover grayscale rounded-lg transition-transform duration-700 group-hover:scale-105"
                       />
                     </div>
                   </div>
