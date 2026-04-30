@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 interface HeroProps {
   title: string;
   subtitle?: string;
@@ -14,7 +12,6 @@ const Hero = ({
   title,
   subtitle,
   buttonText,
-  buttonLink,
   onButtonClick,
   backgroundImage = "/images/hero-bg.jpg",
 }: HeroProps) => {
@@ -24,7 +21,7 @@ const Hero = ({
         className="absolute inset-0 bg-cover bg-center grayscale zoom-in"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/20" />
       </div>
       <div className="relative z-10 flex flex-col h-full">
         <div className="flex-1 flex flex-col items-center justify-center px-6 py-24 md:py-0">

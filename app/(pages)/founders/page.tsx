@@ -2,10 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { HugeiconsIcon } from "@hugeicons/react";
-import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
 import FAQ from "@/app/_components/faq";
+import Hero from "@/app/ui/hero";
 
 const faqs = [
   {
@@ -19,7 +17,6 @@ const faqs = [
 ];
 
 export default function FoundersPage() {
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [email, setEmail] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -27,7 +24,6 @@ export default function FoundersPage() {
 
   return (
     <div className="flex flex-col flex-1">
-      {/* Hero Section */}
       <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 z-0 grayscale"
@@ -39,20 +35,11 @@ export default function FoundersPage() {
         >
           <div className="absolute inset-0 bg-black/40" />
         </div>
-        <div className="relative z-10 w-full px-6 lg:px-12 text-center flex flex-col items-center pt-44 pb-24">
-          <h1 className="text-3xl lg:text-[56px] font-light tracking-wide text-[#fffcf2] mb-6 max-w-4xl leading-tight text-balance">
-            The Founder – Yotam Kafri & The Mudras Story
-          </h1>
-          <p className="text-lg text-white/70 font-light mb-8">
-            The Hands Behind Mudras
-          </p>
-          <Link
-            href="/contact"
-            className="bg-[#f0cc75] uppercase hover:bg-[#e0bc65] text-black px-8 py-4 font-medium tracking-wide transition-colors inline-block"
-          >
-            Book Your Session
-          </Link>
-        </div>
+        <Hero
+          title="The Hands Behind Mudras"
+          buttonText="BOOK YOUR SESSION"
+          buttonLink="/contact"
+        />
       </section>
 
       {/* Yotam Kafri Bio */}
@@ -77,18 +64,28 @@ export default function FoundersPage() {
                 </p>
                 <p>
                   His approach blends technical precision with intuitive
-                  understanding developed through decades of practice, study, and
-                  collaboration with elite athletes, performers, and
+                  understanding developed through decades of practice, study,
+                  and collaboration with elite athletes, performers, and
                   rehabilitation experts.
                 </p>
                 <p>
-                  From his early training in advanced Western, European, and Eastern modalities to years of working directly with clients seeking and demanding optimal recovery and performance, Yotam has built a reputation for excellence and care.
+                  From his early training in advanced Western, European, and
+                  Eastern modalities to years of working directly with clients
+                  seeking and demanding optimal recovery and performance, Yotam
+                  has built a reputation for excellence and care.
                 </p>
                 <p>
-                  At Mudras, his philosophy is simple yet profound: to listen deeply and to assess each individual’s movement before every session. This guiding principle shapes every experience, ensuring that each session not only relieves tension, restores balance and optimal results.
+                  At Mudras, his philosophy is simple yet profound: to listen
+                  deeply and to assess each individual’s movement before every
+                  session. This guiding principle shapes every experience,
+                  ensuring that each session not only relieves tension, restores
+                  balance and optimal results.
                 </p>
                 <p>
-                  Yotam continues to lead and mentor the Mudras team, setting the highest standards in technique, consistency, and integrity. His goals have always been to continue creating a safe place where expert touch meets genuine understanding.
+                  Yotam continues to lead and mentor the Mudras team, setting
+                  the highest standards in technique, consistency, and
+                  integrity. His goals have always been to continue creating a
+                  safe place where expert touch meets genuine understanding.
                 </p>
               </div>
             </div>
@@ -140,9 +137,8 @@ export default function FoundersPage() {
                   become a practice where people find what they&apos;ve been
                   looking for. Two decades means countless hours spent
                   understanding how bodies hold tension, how they respond to
-                  different techniques, and what creates real change rather
-                  than temporary comfort. That&apos;s what shapes how we work
-                  today.
+                  different techniques, and what creates real change rather than
+                  temporary comfort. That&apos;s what shapes how we work today.
                 </p>
                 <div className="pt-2">
                   <p className="font-medium text-foreground mb-4">
@@ -230,9 +226,9 @@ export default function FoundersPage() {
               ))}
             </div>
             <p className="text-base lg:text-[17px] leading-relaxed text-foreground/80 font-light">
-              These relationships exist through referrals, not marketing.
-              People recommend Mudras<sup>®</sup> when they&apos;ve experienced
-              the difference themselves.
+              These relationships exist through referrals, not marketing. People
+              recommend Mudras<sup>®</sup> when they&apos;ve experienced the
+              difference themselves.
             </p>
           </div>
         </div>
@@ -262,8 +258,8 @@ export default function FoundersPage() {
                 <p>
                   During the conversation, you describe what you&apos;re
                   experiencing. Then your specialist&apos;s hands confirm what
-                  your body is actually holding. Sessions evolve based on what we
-                  discover.
+                  your body is actually holding. Sessions evolve based on what
+                  we discover.
                 </p>
                 <p>
                   The only predetermined element is our commitment to addressing
@@ -346,8 +342,8 @@ export default function FoundersPage() {
           <div className="space-y-6 text-base lg:text-[17px] leading-relaxed text-foreground/90 font-light">
             <p>
               Twenty years of practice hasn&apos;t meant perfecting a final
-              method. Every body teaches us something. Every specialist continues
-              studying, questioning, refining their approach.
+              method. Every body teaches us something. Every specialist
+              continues studying, questioning, refining their approach.
             </p>
             <p>
               Yotam still explores techniques that might improve what Mudras
@@ -355,9 +351,9 @@ export default function FoundersPage() {
               each other&apos;s assumptions.
             </p>
             <p>
-              What continues looks like what started this practice: an unwavering
-              commitment to the people who trust us with their bodies, and a
-              refusal to compromise on what we know works.
+              What continues looks like what started this practice: an
+              unwavering commitment to the people who trust us with their
+              bodies, and a refusal to compromise on what we know works.
             </p>
           </div>
         </div>
@@ -398,7 +394,8 @@ export default function FoundersPage() {
           </p>
           <p className="text-white/80 leading-relaxed text-sm mb-3 italic max-w-3xl mx-auto">
             As a small thank-you, every subscriber is automatically entered into
-            our random giveaway for a complimentary Mudras<sup>®</sup> experience.
+            our random giveaway for a complimentary Mudras<sup>®</sup>{" "}
+            experience.
           </p>
           <p className="text-white/60 text-sm mb-10">
             Your information is always kept private and never shared.
@@ -406,9 +403,7 @@ export default function FoundersPage() {
 
           {subscribed ? (
             <div className="py-8">
-              <h3 className="text-2xl font-light text-[#fffcf2]">
-                Thank you!
-              </h3>
+              <h3 className="text-2xl font-light text-[#fffcf2]">Thank you!</h3>
             </div>
           ) : (
             <form

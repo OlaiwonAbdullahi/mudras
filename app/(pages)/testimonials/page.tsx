@@ -1,8 +1,9 @@
+import Hero from "@/app/ui/hero";
 import Image from "next/image";
 import Link from "next/link";
 
 const testimonials: { name: string; title: string; quote: string[] }[] = [
-   {
+  {
     name: "Dr. Kyle O'Flaherty",
     title: "Doctor of Physical Therapy",
     quote: [
@@ -185,32 +186,12 @@ const QuoteMark = () => (
 export default function TestimonialsPage() {
   return (
     <div className="flex flex-col flex-1">
-      {/* Hero Section */}
-      <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 z-0 grayscale"
-          style={{
-            backgroundImage: "url(/images/newsletter.webp)",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        >
-          <div className="absolute inset-0 bg-black/55" />
-        </div>
-        <div className="relative z-10 w-full px-6 lg:px-12 text-center flex flex-col items-center pt-44 pb-24">
-          <h1 className="text-5xl lg:text-7xl font-light tracking-wide text-[#fffcf2] mb-10">
-            Testimonials
-          </h1>
-          <Link
-            href="/contact"
-            className="bg-[#f0cc75] uppercase hover:bg-[#e0bc65] text-black px-8 py-4 font-medium tracking-wide transition-colors inline-block"
-          >
-            Book Your Session
-          </Link>
-        </div>
-      </section>
-
-      {/* Testimonials - Card Grid */}
+      <Hero
+        buttonLink="/contact"
+        buttonText="Book Your Session"
+        title="Testimonials"
+        backgroundImage="/images/testhero.webp"
+      />
       <section className="bg-[#fffcf2] py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20">
           <div className="text-center mb-12 md:mb-16">

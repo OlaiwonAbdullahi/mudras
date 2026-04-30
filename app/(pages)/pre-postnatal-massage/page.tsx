@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { PlusSignIcon, Check } from "@hugeicons/core-free-icons";
+import Hero from "@/app/ui/hero";
 
 const faqs = [
   {
@@ -34,32 +35,13 @@ export default function PrePostnatalPage() {
 
   return (
     <div className="flex flex-col flex-1">
-      {/* Hero Section */}
-      <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: "url(/images/p-hero.webp)",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        >
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
-        <div className="relative z-10 w-full px-6 lg:px-12 text-center flex flex-col items-center pt-44 pb-24">
-          <h1 className="text-4xl lg:text-[56px] font-light tracking-wide text-[#fffcf2] mb-6 max-w-4xl leading-tight text-balance">
-            Pre & Postnatal Massage Therapy NYC
-          </h1>
-          <Link
-            href="/contact"
-            className="mt-6 bg-[#f0cc75] uppercase hover:bg-[#e0bc65] text-black px-8 py-4 font-medium tracking-wide transition-colors inline-block"
-          >
-            Book Your Session
-          </Link>
-        </div>
-      </section>
+      <Hero
+        title="Pre & Postnatal Massage Therapy NYC"
+        buttonLink="/contact"
+        buttonText="Book Your Session"
+        backgroundImage="/images/p-hero.webp"
+      />
 
-      {/* Nurture Section */}
       <section className="py-16 md:py-28 px-6 md:px-12 lg:px-20 bg-stone-100">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -78,12 +60,16 @@ export default function PrePostnatalPage() {
                 <p>
                   Pregnancy transforms your body in ways that are extraordinary
                   and deeply personal. The physical demands of carrying,
-                  delivering, and recovering ask more of you than almost anything
-                  else. This kind of transformation requires care shaped around
-                  her specific experience.
+                  delivering, and recovering ask more of you than almost
+                  anything else. This kind of transformation requires care
+                  shaped around her specific experience.
                 </p>
                 <p>
-                 Our Pre & Postnatal Massage sessions address what your body needs as it changes through pregnancy and postpartum recovery. Led by our prenatal specialist with over twenty years of dedicated practice, each session focuses on your comfort, safety, and genuine restoration.
+                  Our Pre & Postnatal Massage sessions address what your body
+                  needs as it changes through pregnancy and postpartum recovery.
+                  Led by our prenatal specialist with over twenty years of
+                  dedicated practice, each session focuses on your comfort,
+                  safety, and genuine restoration.
                 </p>
               </div>
             </div>
@@ -144,8 +130,8 @@ export default function PrePostnatalPage() {
                 Safety You Can Trust
               </h3>
               <p className="text-[#212121]/70 leading-relaxed text-base">
-                We choose techniques based on where you are in your pregnancy
-                or recovery, ensuring care that serves both you and your baby.
+                We choose techniques based on where you are in your pregnancy or
+                recovery, ensuring care that serves both you and your baby.
                 Every decision reflects our commitment to your wellbeing.
               </p>
             </div>
