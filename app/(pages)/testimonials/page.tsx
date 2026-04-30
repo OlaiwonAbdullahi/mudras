@@ -192,7 +192,7 @@ export default function TestimonialsPage() {
         title="Testimonials"
         backgroundImage="/images/testhero.webp"
       />
-      <section className="bg-[#fffcf2] py-16 md:py-24">
+      <section className="bg-[#FFFCF2] py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20">
           <div className="text-center mb-12 md:mb-16">
             <Image
@@ -211,13 +211,13 @@ export default function TestimonialsPage() {
             {testimonials.map((t) => (
               <div
                 key={t.name}
-                className="border border-[#212121]/15 rounded-xl p-8 md:p-10 bg-transparent flex flex-col transition-all duration-500 hover:border-[#a08858]/60 hover:shadow-md hover:-translate-y-1"
+                className="border border-[#1F2C1B] rounded-xl p-8 md:p-10 bg-transparent flex flex-col "
               >
                 <div className="flex justify-between items-start gap-4 mb-6">
                   <div>
-                    <h3 className="text-lg font-medium text-[#212121] mb-1">
+                    <p className=" font-semibold text-2xl text-[#212121] mb-1">
                       {t.name}
-                    </h3>
+                    </p>
                     <p className="text-sm text-[#212121]/60 italic">
                       {t.title}
                     </p>
